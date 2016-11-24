@@ -98,8 +98,10 @@
         });
       }
       
-        
+      $(document).ready(function() {
+        $(".wapp").hide();
       $("#btn1").click(function(){
+        $(".wapp").show();
         city_v = $("#city").val();
         getStats(function (data) {
           //document.getElementById('0').innerHTML = JSON.stringify(data);
@@ -158,6 +160,7 @@
             " <sup>o</sup>C<br>Night &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : " + data.list[4].temp.night +
             " <sup>o</sup>C<br>Humidity : " + data.list[4].humidity + "%";
         });
+      }); 
       });
         
     </script>
