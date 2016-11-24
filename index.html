@@ -106,6 +106,50 @@
             " <sup>o</sup>C<br>Evening &nbsp;&nbsp; : " + data.list[0].temp.eve +
             " <sup>o</sup>C<br>Night &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : " + data.list[0].temp.night +
             " <sup>o</sup>C<br>Humidity : " + data.list[0].humidity + "%";
+          
+          document.getElementById('img1').src = "http://openweathermap.org/img/w/" + data.list[1].weather[0].icon + ".png";
+          document.getElementById('hed1').innerHTML = myDays[n+1] +"<br>"+ data.list[1].temp.day + " <sup>o</sup>C<br>" + data.list[1].weather[0].main;
+          document.getElementById('1').innerHTML = 
+            data.list[1].weather[0].description +
+            "<br>Minimum : " + data.list[1].temp.min +
+            " <sup>o</sup>C<br>Maximum : " + data.list[1].temp.max +
+            " <sup>o</sup>C<br>Morning &nbsp; : " + data.list[1].temp.morn +
+            " <sup>o</sup>C<br>Evening &nbsp;&nbsp; : " + data.list[1].temp.eve +
+            " <sup>o</sup>C<br>Night &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : " + data.list[1].temp.night +
+            " <sup>o</sup>C<br>Humidity : " + data.list[1].humidity + "%";
+          
+          document.getElementById('img2').src = "http://openweathermap.org/img/w/" + data.list[2].weather[0].icon + ".png";
+          document.getElementById('hed2').innerHTML = myDays[n+2] +"<br>"+ data.list[2].temp.day + " <sup>o</sup>C<br>" + data.list[2].weather[0].main;
+          document.getElementById('2').innerHTML = 
+            data.list[2].weather[0].description +
+            "<br>Minimum : " + data.list[2].temp.min +
+            " <sup>o</sup>C<br>Maximum : " + data.list[2].temp.max +
+            " <sup>o</sup>C<br>Morning &nbsp; : " + data.list[2].temp.morn +
+            " <sup>o</sup>C<br>Evening &nbsp;&nbsp; : " + data.list[2].temp.eve +
+            " <sup>o</sup>C<br>Night &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : " + data.list[2].temp.night +
+            " <sup>o</sup>C<br>Humidity : " + data.list[2].humidity + "%";
+          
+          document.getElementById('img3').src = "http://openweathermap.org/img/w/" + data.list[3].weather[0].icon + ".png";
+          document.getElementById('hed3').innerHTML = myDays[n+3] +"<br>"+ data.list[3].temp.day + " <sup>o</sup>C<br>" + data.list[3].weather[0].main;
+          document.getElementById('3').innerHTML = 
+            data.list[3].weather[0].description +
+            "<br>Minimum : " + data.list[3].temp.min +
+            " <sup>o</sup>C<br>Maximum : " + data.list[3].temp.max +
+            " <sup>o</sup>C<br>Morning &nbsp; : " + data.list[3].temp.morn +
+            " <sup>o</sup>C<br>Evening &nbsp;&nbsp; : " + data.list[3].temp.eve +
+            " <sup>o</sup>C<br>Night &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : " + data.list[3].temp.night +
+            " <sup>o</sup>C<br>Humidity : " + data.list[3].humidity + "%";
+          
+          document.getElementById('img4').src = "http://openweathermap.org/img/w/" + data.list[4].weather[0].icon + ".png";
+          document.getElementById('hed4').innerHTML = myDays[n+4] +"<br>"+ data.list[4].temp.day + " <sup>o</sup>C<br>" + data.list[4].weather[0].main;
+          document.getElementById('4').innerHTML = 
+            data.list[4].weather[0].description +
+            "<br>Minimum : " + data.list[4].temp.min +
+            " <sup>o</sup>C<br>Maximum : " + data.list[4].temp.max +
+            " <sup>o</sup>C<br>Morning &nbsp; : " + data.list[4].temp.morn +
+            " <sup>o</sup>C<br>Evening &nbsp;&nbsp; : " + data.list[4].temp.eve +
+            " <sup>o</sup>C<br>Night &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : " + data.list[4].temp.night +
+            " <sup>o</sup>C<br>Humidity : " + data.list[4].humidity + "%";
         });
       });
         
@@ -116,6 +160,30 @@
         <img id="img0" style="height:80px; width:80px; float:right; ">
         <h2 id="hed0"></h2>
         <h4 id="0" style="float:left;"></h4>
+      </div>
+      
+      <div class="wapp" >  
+        <img id="img1" style="height:80px; width:80px; float:right; ">
+        <h2 id="hed1"></h2>
+        <h4 id="1" style="float:left;"></h4>
+      </div>
+      
+      <div class="wapp" >  
+        <img id="img2" style="height:80px; width:80px; float:right; ">
+        <h2 id="hed2"></h2>
+        <h4 id="2" style="float:left;"></h4>
+      </div>
+      
+      <div class="wapp" >  
+        <img id="img3" style="height:80px; width:80px; float:right; ">
+        <h2 id="hed3"></h2>
+        <h4 id="3" style="float:left;"></h4>
+      </div>
+      
+      <div class="wapp" >  
+        <img id="img4" style="height:80px; width:80px; float:right; ">
+        <h2 id="hed4"></h2>
+        <h4 id="4" style="float:left;"></h4>
       </div>
     </div>
 
