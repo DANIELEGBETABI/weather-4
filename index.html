@@ -71,7 +71,7 @@
       
       function getStats(callback) {
       
-        var weather = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=London,uk&units=metric' ;
+        var weather = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=London,uk&units=metric&APPID=6a47ae5364705b0d1cb4859e16a1f6f0' ;
         $.ajax({
           dataType: "jsonp",
           url: weather,
@@ -82,6 +82,7 @@
       getStats(function (data) {
         document.getElementById('0').innerHTML = JSON.stringify(data);
       });
+        
     </script>
 
     <h4 id="0"></h4>
