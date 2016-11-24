@@ -68,9 +68,22 @@
     
     <script>
       
+      function getStats(callback) {
       
+        var weather = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=London,uk&units=metric' ;
+        $.ajax({
+          dataType: "jsonp",
+          url: weather,
+          success: callback
+        });
+      }
       
+      getStats(function (data) {
+        document.getElementById('0').innerHTML = JSON.stringify(data);
+      });
     </script>
+
+    <h4 id="0"></h4>
 
     
   </body>
