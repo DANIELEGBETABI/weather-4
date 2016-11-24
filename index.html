@@ -97,7 +97,7 @@
         getStats(function (data) {
           //document.getElementById('0').innerHTML = JSON.stringify(data);
           document.getElementById('img0').src = "http://openweathermap.org/img/w/" + data.list[0].weather[0].icon + ".png";
-          document.getElementById('hed0').innerHTML = myDays[n] +"<br>"+ data.list[0].temp.day + " <sup><sup>o</sup>C</sup><br>" + data.list[0].weather[0].main;
+          document.getElementById('hed0').innerHTML = myDays[n] +"<br>"+ data.list[0].temp.day + " <sup>o</sup>C<br>" + data.list[0].weather[0].main;
           document.getElementById('0').innerHTML = 
             data.list[0].weather[0].description +
             "<br>Minimum : " + data.list[0].temp.min +
