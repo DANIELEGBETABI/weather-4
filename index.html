@@ -69,6 +69,10 @@
     
     <script>
       
+      var d = new Date();
+      var n = d.getDay();
+      var myDays= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday","Monday","Tuesday","Wednesday"];
+      
       function getStats(callback) {
       
         var weather = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=London,uk&units=metric&APPID=6a47ae5364705b0d1cb4859e16a1f6f0' ;
@@ -82,7 +86,7 @@
       getStats(function (data) {
         //document.getElementById('0').innerHTML = JSON.stringify(data);
         document.getElementById('img0').src = "http://openweathermap.org/img/w/" + data.list[0].weather[0].icon + ".png";
-        document.getElementById('r0').innerHTML = data.list[0].temp.day + " <sup>o</sup>C<br>" + data.list[0].weather[0].main;
+        document.getElementById('hed0').innerHTML = myDays[n]; +"<br>"+ data.list[0].temp.day + " <sup><sup>o</sup>C</sup><br>" + data.list[0].weather[0].main;
         document.getElementById('0').innerHTML = 
           data.list[0].weather[0].description +
           "<br>Minimum : " + data.list[0].temp.min +
@@ -99,8 +103,7 @@
     <div style="display:block;float:left;clear:left">
       <div class="wapp" >  
         <img id="img0" style="height:80px; width:80px; float:right; ">
-        <h2 id=hed0></h2>
-        <h3 id="r0"></h3>
+        <h2 id="hed0"></h2>
         <h4 id="0" style="float:left;"></h4>
       </div>
     </div>
