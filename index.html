@@ -38,6 +38,14 @@
         border-radius: 20px;
         padding: 10px 20px;
       }
+      .wapp { 
+        display:inline;
+        float:left;
+        border: 2px solid grey;
+        border-radius: 12px;
+        padding: 15px 30px;
+        margin: 5px 20px;  
+      }
         
     </style>
     
@@ -68,14 +76,14 @@
     </div>
     
     <script>
-      
+      var city_v;
       var d = new Date();
       var n = d.getDay();
       var myDays= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday","Monday","Tuesday","Wednesday"];
       
       function getStats(callback) {
       
-        var weather = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=London,uk&units=metric&APPID=6a47ae5364705b0d1cb4859e16a1f6f0' ;
+        var weather = 'http://api.openweathermap.org/data/2.5/forecast/daily?q='+city_v+'&units=metric&APPID=6a47ae5364705b0d1cb4859e16a1f6f0' ;
         $.ajax({
           dataType: "jsonp",
           url: weather,
@@ -83,19 +91,22 @@
         });
       }
       
-      getStats(function (data) {
-        //document.getElementById('0').innerHTML = JSON.stringify(data);
-        document.getElementById('img0').src = "http://openweathermap.org/img/w/" + data.list[0].weather[0].icon + ".png";
-        document.getElementById('hed0').innerHTML = myDays[n] +"<br>"+ data.list[0].temp.day + " <sup><sup>o</sup>C</sup><br>" + data.list[0].weather[0].main;
-        document.getElementById('0').innerHTML = 
-          data.list[0].weather[0].description +
-          "<br>Minimum : " + data.list[0].temp.min +
-          " <sup>o</sup>C<br>Maximum : " + data.list[0].temp.max +
-          " <sup>o</sup>C<br>Morning &nbsp; : " + data.list[0].temp.morn +
-          " <sup>o</sup>C<br>Evening &nbsp;&nbsp; : " + data.list[0].temp.eve +
-          " <sup>o</sup>C<br>Night &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : " + data.list[0].temp.night +
-          " <sup>o</sup>C<br>Humidity : " + data.list[0].humidity + "%";
-  
+        
+      $("#btn1").click(function(){
+        city_v = $("#city").val();
+        getStats(function (data) {
+          //document.getElementById('0').innerHTML = JSON.stringify(data);
+          document.getElementById('img0').src = "http://openweathermap.org/img/w/" + data.list[0].weather[0].icon + ".png";
+          document.getElementById('hed0').innerHTML = myDays[n] +"<br>"+ data.list[0].temp.day + " <sup><sup>o</sup>C</sup><br>" + data.list[0].weather[0].main;
+          document.getElementById('0').innerHTML = 
+            data.list[0].weather[0].description +
+            "<br>Minimum : " + data.list[0].temp.min +
+            " <sup>o</sup>C<br>Maximum : " + data.list[0].temp.max +
+            " <sup>o</sup>C<br>Morning &nbsp; : " + data.list[0].temp.morn +
+            " <sup>o</sup>C<br>Evening &nbsp;&nbsp; : " + data.list[0].temp.eve +
+            " <sup>o</sup>C<br>Night &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : " + data.list[0].temp.night +
+            " <sup>o</sup>C<br>Humidity : " + data.list[0].humidity + "%";
+        });
       });
         
     </script>
