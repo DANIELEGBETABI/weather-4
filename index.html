@@ -44,7 +44,7 @@
         float:left;
         border: 2px solid grey;
         border-radius: 12px;
-        padding: 15px 30px;
+        padding: 15px 40px;
         margin: 5px;  
       }
       h4 {
@@ -103,7 +103,7 @@
         getStats(function (data) {
           //document.getElementById('0').innerHTML = JSON.stringify(data);
           document.getElementById('img0').src = "http://openweathermap.org/img/w/" + data.list[0].weather[0].icon + ".png";
-          document.getElementById('hed0').innerHTML = myDays[n] +"<br>"+ data.list[0].temp.day + " <sup>o</sup>C<br>" + data.list[0].weather[0].main;
+          document.getElementById('hed0').innerHTML = "Today<br>"+ data.list[0].temp.day + " <sup>o</sup>C<br>" + data.list[0].weather[0].main;
           document.getElementById('0').innerHTML = 
             data.list[0].weather[0].description +
             "<br>Minimum : " + data.list[0].temp.min +
@@ -114,7 +114,7 @@
             " <sup>o</sup>C<br>Humidity : " + data.list[0].humidity + "%";
           
           document.getElementById('img1').src = "http://openweathermap.org/img/w/" + data.list[1].weather[0].icon + ".png";
-          document.getElementById('hed1').innerHTML = myDays[n+1] +"<br>"+ data.list[1].temp.day + " <sup>o</sup>C<br>" + data.list[1].weather[0].main;
+          document.getElementById('hed1').innerHTML = "Tommorow<br>"+ data.list[1].temp.day + " <sup>o</sup>C<br>" + data.list[1].weather[0].main;
           document.getElementById('1').innerHTML = 
             data.list[1].weather[0].description +
             "<br>Minimum : " + data.list[1].temp.min +
