@@ -81,9 +81,9 @@
       
       getStats(function (data) {
         //document.getElementById('0').innerHTML = JSON.stringify(data);
+        document.getElementById('r0').innerHTML = data.list[0].temp.day + " <sup>o</sup>C<br>" + data.list[0].weather[0].main;
         document.getElementById('0').innerHTML = 
-          "<br>" + data.list[0].temp.day +
-          " <sup>o</sup>C<br>" + data.list[0].weather[0].description +
+          "<br>" +  data.list[0].weather[0].description +
           "<br>Minimum : " + data.list[0].temp.min +
           " <sup>o</sup>C<br>Maximum : " + data.list[0].temp.max +
           " <sup>o</sup>C<br>Morning &nbsp; : " + data.list[0].temp.morn +
@@ -95,6 +95,7 @@
         
     </script>
 
+    <h2 id="r0"></h2>
     <h4 id="0"></h4>
 
     
