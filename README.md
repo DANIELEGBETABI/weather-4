@@ -9,4 +9,6 @@ This website is for forcasting 5 days weather of a specified city.
     iv. Click Find.
     v. OUTPUT will be shown below.
     
+2. With more time, great design could be achieved. More CSS elements like 3D and 2D transformations, animations could be done on the page. And page could be optimized for faster loading time. More pages could be made.
+    
  
